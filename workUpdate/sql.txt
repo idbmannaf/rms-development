@@ -1,0 +1,8 @@
+ALTER TABLE `tower_data` ADD `llvd_fail_voltage_value` VARCHAR(255) NULL DEFAULT NULL AFTER `door_open_alarm_duration`, ADD `dc_low_voltage_value` VARCHAR(255) NULL DEFAULT NULL AFTER `llvd_fail_voltage_value`;
+
+ALTER TABLE `towers` ADD `smu_lock` TINYINT NOT NULL DEFAULT '0' AFTER `llvd_fail_voltage_value`;
+
+
+
+
+

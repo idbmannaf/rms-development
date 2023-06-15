@@ -1,0 +1,22 @@
+
+Put this master file
+<script>
+    @if(Session::has('success'))
+    Toastify({ text: "{{ Session::get('success') }}", duration: 3000,
+        style: { background: "linear-gradient(to right, #00b09b, #96c93d)" }
+    }).showToast();
+
+    @elseif(Session::has('warning'))
+    Toastify({ text: "{{ Session::get('warning') }}", duration: 3000,
+        style: { background: "linear-gradient(to right, #00b09b, #96c93d)" }
+    }).showToast();
+
+    @elseif(Session::has('error'))
+    Toastify({ text: "{{ Session::get('error') }}", duration: 3000,
+        style: { background: "linear-gradient(to right, #00b09b, #96c93d)",
+                color:'#f51804'
+        }
+    }).showToast();
+
+    @endif
+</script>
